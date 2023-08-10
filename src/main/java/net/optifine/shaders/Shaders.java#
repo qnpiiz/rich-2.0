@@ -1,0 +1,25 @@
+***************
+*** 2494,2504 ****
+  
+      private static int getDrawBuffer(Program p, String str, int i)
+      {
+-         int i = 0;
+  
+          if (i >= str.length())
+          {
+-             return i;
+          }
+          else
+          {
+--- 2496,2506 ----
+  
+      private static int getDrawBuffer(Program p, String str, int i)
+      {
++         int d = 0;
+  
+          if (i >= str.length())
+          {
++             return d;
+          }
+          else
+          {
