@@ -9,18 +9,31 @@ SDK (база, основа) rich client на версию 1.16.5
 Из-за новой системы рендеринга на версии 1.16.5 и моей лени произошли следующие изменения:
 * К каждому методу отрисовки шрифтов и RenderUtils в конце добавлен параметр **MatrixStack**
 * **Убрал поиск** в кликгуи, **potato mode** и **аниме картинки**
-* `Rich.instance.` name, type, version были заменены на `Rich.instance` NAME, VERSION
+* `Rich.instance.` name, type, version были заменены на `Rich.` NAME, VERSION
+* Нету многих функций, альт менеджера, **конечно всё это будет, но через определённое время**
 
 ## Как использовать?
 1. Откройте главное меню **Intellij Idea** и нажмите `Get From VCS`:
+
 ![one](readme/one.png)
+
 2. В **URL** вставьте следующую ссылку: `https://github.com/qnpiiz/rich-2.0.git`
+
 ![two](readme/two.png)
+
 3. Нажмите на кнопку `Clone`
 4. Справа выберите черепашку и нажмите на иконку **перезагрузки**:
+
 ![three](readme/three.png)
+
 5. Откройте src/main/java/Start и нажмите на **зеленую стрелочку**:
+
 ![four](readme/four.png)
 
 ![five](readme/five.png)
+
 6. Наслаждаемся клиентом
+
+Скриншот:
+
+![screenshot](https://i.ibb.co/tHjWw2J/image.png)
