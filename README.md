@@ -14,13 +14,18 @@ SDK (база, основа) rich client на версию 1.16.5
 
 ## Как использовать?
 1. Откройте главное меню **Intellij Idea** и нажмите `Get From VCS`:
+
 ![one](readme/one.png)
-2. В **URL** вставьте следующую ссылку: `https://github.com/qnpiiz/rich-2.0.git`
+3. В **URL** вставьте следующую ссылку: `https://github.com/qnpiiz/rich-2.0.git`
+
 ![two](readme/two.png)
-3. Нажмите на кнопку `Clone`
-4. Справа выберите черепашку и нажмите на иконку **перезагрузки**:
+
+4. Нажмите на кнопку `Clone`
+5. Справа выберите черепашку и нажмите на иконку **перезагрузки**:
+
 ![three](readme/three.png)
-5. Откройте src/main/java/Start и нажмите на **зеленую стрелочку**:
+7. Откройте src/main/java/Start и нажмите на **зеленую стрелочку**:
+
 ![four](readme/four.png)
 
 ![five](readme/five.png)
