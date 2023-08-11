@@ -1,7 +1,11 @@
 package fun.rich;
 
 import fun.rich.draggable.DraggableHUD;
+import fun.rich.files.FileManager;
+import fun.rich.files.impl.HudConfig;
+import fun.rich.macro.MacroManager;
 import lombok.AccessLevel;
+import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import net.minecraft.client.Minecraft;
 import fun.rich.event.EventManager;
@@ -19,17 +23,30 @@ public class Rich {
     FriendManager friendManager;
     FeatureManager featureManager;
     ClickGuiScreen clickGui;
+    MacroManager macroManager;
+    FileManager fileManager;
 
     public static final String NAME = "RichClient";
     public static final String VERSION = "0.1.1";
     public static final Rich instance = new Rich();
 
+    @SneakyThrows
     public void init() {
         Minecraft.getInstance().getMainWindow().setWindowTitle(NAME.concat(" v").concat(VERSION));
         draggableHUD = new DraggableHUD();
         friendManager = new FriendManager();
         featureManager = new FeatureManager();
         clickGui = new ClickGuiScreen();
+        macroManager = new MacroManager();
+        fileManager = new FileManager();
+        try {
+            fileManager.getFile(FriendManager.class).loadFile();
+            fileManager.getFile(MacroManager.class).loadFile();
+            fileManager.getFile(HudConfig.class).loadFile();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+        
         EventManager.register(this);
     }
 
