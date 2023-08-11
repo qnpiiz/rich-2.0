@@ -2,6 +2,7 @@ package fun.rich.font;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
+import fun.rich.utils.render.ClientHelper;
 import fun.rich.utils.render.RenderUtils;
 import net.minecraft.client.renderer.texture.BufferedImageTexture;
 import org.lwjgl.opengl.GL11;
@@ -118,6 +119,15 @@ public class MCFontRenderer extends CFont {
         return drawString(text, x, y, color, false, matrixStack);
     }
 
+    public void drawStringWithFade(String s, double x, double y, MatrixStack matrixStack) {
+        double updateX = x;
+        for (int i = 0; i < s.length(); i += 1) {
+            String str = s.charAt(i) + "";
+            this.drawStringWithShadow(str, updateX, y, ClientHelper.getClientColor(1, i, 0.7f, 30).getRGB(), matrixStack);
+
+            updateX += getStringWidth(s.charAt(i) + "") + 0.4F;
+        }
+    }
 
     public float drawCenteredString(String text, float x, float y, int color, MatrixStack matrixStack) {
         return drawString(text, x - getStringWidth(text) / 2F, y, color, matrixStack);
@@ -241,6 +251,9 @@ public class MCFontRenderer extends CFont {
 
     @Override
     public int getStringWidth(String text) {
+        if (text == null)
+            return 0;
+
         int width = 0;
         CharData[] currentData = this.charData;
         boolean bold = false;

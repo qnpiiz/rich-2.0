@@ -28,8 +28,8 @@ public class Hud extends Feature {
             dwm.setWidth(180);
             dwm.setHeight(25);
             GLUtils.INSTANCE.rescale(scale);
-            mc.rubik_30.drawString("RichClient", dwm.getX() + 3, dwm.getY() + 3, ClickGUI.color.getColorValue(), event.getMatrixStack());
-            mc.rubik_18.drawString("Version "+Rich.VERSION, dwm.getX() + 4, dwm.getY() + 19, ClickGUI.color.getColorValue(), event.getMatrixStack());
+            mc.rubik_30.drawStringWithFade("RichClient", dwm.getX() + 3, dwm.getY() + 3, event.getMatrixStack());
+            mc.rubik_18.drawStringWithFade("Version "+Rich.VERSION, dwm.getX() + 4, dwm.getY() + 19, event.getMatrixStack());
 
             GLUtils.INSTANCE.rescaleMC();
         }

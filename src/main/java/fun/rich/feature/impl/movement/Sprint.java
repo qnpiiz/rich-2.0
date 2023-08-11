@@ -9,7 +9,7 @@ import fun.rich.utils.math.MovementUtils;
 public class Sprint extends Feature {
 
     public Sprint() {
-        super("Spring", FeatureCategory.Movement);
+        super("Sprint", FeatureCategory.Movement);
     }
 
     @EventTarget

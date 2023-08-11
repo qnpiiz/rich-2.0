@@ -1,6 +1,7 @@
 package fun.rich.utils.math;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.util.math.MathHelper;
 
 public class AnimationHelper {
 
@@ -16,5 +17,19 @@ public class AnimationHelper {
         }
 
         return (float) (animation + diff);
+    }
+
+    public static float move(float from, float to, float minstep, float maxstep, float factor) {
+        float f = (to - from) * MathHelper.clamp(factor,0,1);
+
+        if (f < 0)
+            f = MathHelper.clamp(f, -maxstep, -minstep);
+        else
+            f = MathHelper.clamp(f, minstep, maxstep);
+
+        if (Math.abs(f) > Math.abs(to - from))
+            return to;
+
+        return from + f;
     }
 }

@@ -24,6 +24,7 @@ public class Feature extends Configurable {
 
     private final FeatureCategory category;
     private final String label;
+    public float animYto;
 
     private boolean enabled;
     private @Setter String suffix;
@@ -118,5 +119,9 @@ public class Feature extends Configurable {
                 }
             }
         }
+    }
+
+    public String getSuffix() {
+        return suffix == null ? label : suffix;
     }
 }
