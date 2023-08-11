@@ -44,13 +44,6 @@ import net.minecraft.util.math.vector.Vector4f;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import org.lwjgl.opengl.GL11;
-import russia.font.impl.FontUtils;
-import russia.font.impl.Fonts;
-import russia.render.Render;
-import russia.render.element.impl.RectRenderElement;
-import russia.render.fill.impl.SolidFill;
-import russia.utils.Interpolator;
-import russia.utils.Project;
 
 import java.awt.*;
 import java.nio.FloatBuffer;
