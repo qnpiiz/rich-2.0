@@ -65,7 +65,7 @@ public class Rich {
         featureManager.features.stream()
                 .filter(feature -> feature.getBind() == event.getKey())
                 .forEach(Feature::toggle);
-        // TODO: Add macros to key listener
+        macroManager.getMacros().stream().filter(macros -> macros.getKey() == event.getKey()).forEach(macros -> Minecraft.getInstance().player.sendChatMessage(macros.getValue()));
     }
 
     public static double deltaTime() {
