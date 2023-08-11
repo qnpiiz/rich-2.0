@@ -24,7 +24,9 @@ SDK (база, основа) rich client на версию 1.16.5
 ![four](readme/four.png)
 
 ![five](readme/five.png)
+
 6. Наслаждаемся клиентом
 
 Скриншот:
+
 ![screenshot](https://i.ibb.co/tHjWw2J/image.png)
