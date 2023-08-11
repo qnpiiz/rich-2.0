@@ -3,6 +3,7 @@ package fun.rich.feature;
 import com.google.common.collect.Lists;
 import fun.rich.feature.impl.FeatureCategory;
 import fun.rich.feature.impl.hud.ClickGUI;
+import fun.rich.feature.impl.hud.Hud;
 import fun.rich.feature.impl.hud.Notifications;
 import fun.rich.feature.impl.misc.MiddleClickPearl;
 import fun.rich.feature.impl.movement.GuiWalk;
@@ -30,6 +31,7 @@ public class FeatureManager {
         features.add(new GuiWalk());
         features.add(new DeathCoordinates());
         features.add(new Notifications());
+        features.add(new Hud());
     }
 
     public List<Feature> getAllFeatures() {

@@ -12,7 +12,6 @@ import fun.rich.feature.impl.hud.ClickGUI;
 import fun.rich.ui.clickgui.ClickGuiScreen;
 import fun.rich.ui.clickgui.Panel;
 import fun.rich.ui.settings.Setting;
-import russia.ui.settings.impl.*;
 import fun.rich.utils.math.TimerHelper;
 
 import java.awt.*;

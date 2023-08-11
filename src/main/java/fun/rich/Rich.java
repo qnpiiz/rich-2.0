@@ -1,5 +1,6 @@
 package fun.rich;
 
+import fun.rich.draggable.DraggableHUD;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import net.minecraft.client.Minecraft;
@@ -14,6 +15,7 @@ import fun.rich.ui.clickgui.ClickGuiScreen;
 @FieldDefaults(level = AccessLevel.PUBLIC)
 public class Rich {
 
+    DraggableHUD draggableHUD;
     FriendManager friendManager;
     FeatureManager featureManager;
     ClickGuiScreen clickGui;
@@ -24,6 +26,7 @@ public class Rich {
 
     public void init() {
         Minecraft.getInstance().getMainWindow().setWindowTitle(NAME.concat(" v").concat(VERSION));
+        draggableHUD = new DraggableHUD();
         friendManager = new FriendManager();
         featureManager = new FeatureManager();
         clickGui = new ClickGuiScreen();

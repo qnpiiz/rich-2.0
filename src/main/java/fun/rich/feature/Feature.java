@@ -16,7 +16,6 @@ import org.json.JSONObject;
 import org.lwjgl.glfw.GLFW;
 import fun.rich.ui.settings.Configurable;
 import fun.rich.ui.settings.Setting;
-import russia.ui.settings.impl.*;
 
 @Getter
 public class Feature extends Configurable {

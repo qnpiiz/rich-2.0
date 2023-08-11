@@ -812,4 +812,8 @@ public class MathHelper
 
         return end * ((value) * value * ((s + 1) * value + s) + 1) + start;
     }
+
+    public static boolean isMouseHoveringOnRect(double x, double y, double width, double height, int mouseX, int mouseY) {
+        return mouseX >= x && mouseY >= y && mouseX <= x + width && mouseY <= y + height;
+    }
 }

@@ -1,6 +1,7 @@
 package net.minecraft.client.gui.screen;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
+import fun.rich.Rich;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.CommandSuggestionHelper;
 import net.minecraft.client.gui.NewChatGui;
@@ -169,6 +170,8 @@ public class ChatScreen extends Screen
 
     public boolean mouseClicked(double mouseX, double mouseY, int button)
     {
+        Rich.instance.draggableHUD.getScreen().click((int) mouseX, (int) mouseY);
+
         if (this.commandSuggestionHelper.onClick((double)((int)mouseX), (double)((int)mouseY), button))
         {
             return true;
@@ -194,6 +197,13 @@ public class ChatScreen extends Screen
 
             return this.inputField.mouseClicked(mouseX, mouseY, button) ? true : super.mouseClicked(mouseX, mouseY, button);
         }
+    }
+
+    @Override
+    public boolean mouseReleased(double mouseX, double mouseY, int button) {
+        Rich.instance.draggableHUD.getScreen().release();
+
+        return super.mouseReleased(mouseX, mouseY, button);
     }
 
     protected void insertText(String text, boolean overwrite)
@@ -241,6 +251,8 @@ public class ChatScreen extends Screen
 
     public void render(MatrixStack matrixStack, int mouseX, int mouseY, float partialTicks)
     {
+        Rich.instance.draggableHUD.getScreen().draw(mouseX, mouseY);
+
         this.setListener(this.inputField);
         this.inputField.setFocused2(true);
         fill(matrixStack, 2, this.height - 14, this.width - 2, this.height - 2, this.mc.gameSettings.getChatBackgroundColor(Integer.MIN_VALUE));
