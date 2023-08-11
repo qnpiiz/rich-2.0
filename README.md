@@ -17,16 +17,16 @@ SDK (база, основа) rich client на версию 1.16.5
 
 ![one](readme/one.png)
 
-3. В **URL** вставьте следующую ссылку: `https://github.com/qnpiiz/rich-2.0.git`
+2. В **URL** вставьте следующую ссылку: `https://github.com/qnpiiz/rich-2.0.git`
 
 ![two](readme/two.png)
 
-4. Нажмите на кнопку `Clone`
-5. Справа выберите черепашку и нажмите на иконку **перезагрузки**:
+3. Нажмите на кнопку `Clone`
+4. Справа выберите черепашку и нажмите на иконку **перезагрузки**:
 
 ![three](readme/three.png)
 
-7. Откройте src/main/java/Start и нажмите на **зеленую стрелочку**:
+5. Откройте src/main/java/Start и нажмите на **зеленую стрелочку**:
 
 ![four](readme/four.png)
 
