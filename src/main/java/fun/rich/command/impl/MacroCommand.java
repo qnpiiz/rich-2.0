@@ -47,7 +47,7 @@ public class MacroCommand extends CommandAbstract {
                             return;
                         }
 
-                        Rich.instance.macroManager.getMacros().forEach(macro -> ChatUtils.addChatMessage(TextFormatting.GREEN + "Macros list: " + TextFormatting.WHITE + "Macros Name: " + TextFormatting.RED + macro.getValue() + TextFormatting.WHITE + ", Macro Bind: " + TextFormatting.RED + Keyboard.getKeyName(macro.getKey())));
+                        Rich.instance.macroManager.getMacros().forEach(macro -> ChatUtils.addChatMessage(TextFormatting.GREEN + "Macros list: " + TextFormatting.WHITE + "Macros Name: " + TextFormatting.RED + macro.getValue() + TextFormatting.WHITE + ", Macro Bind: " + TextFormatting.RED + InputMappings.getInputByCode(macro.getKey(), 0).getTranslationKey()));
                     }
                 }
             } else
