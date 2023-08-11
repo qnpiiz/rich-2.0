@@ -1,5 +1,7 @@
 package fun.rich;
 
+import fun.rich.command.CommandManager;
+import fun.rich.config.ConfigManager;
 import fun.rich.draggable.DraggableHUD;
 import fun.rich.files.FileManager;
 import fun.rich.files.impl.HudConfig;
@@ -25,6 +27,8 @@ public class Rich {
     ClickGuiScreen clickGui;
     MacroManager macroManager;
     FileManager fileManager;
+    ConfigManager configManager;
+    CommandManager commandManager;
 
     public static final String NAME = "RichClient";
     public static final String VERSION = "0.1.1";
@@ -39,6 +43,8 @@ public class Rich {
         clickGui = new ClickGuiScreen();
         macroManager = new MacroManager();
         fileManager = new FileManager();
+        configManager = new ConfigManager();
+        commandManager = new CommandManager();
         try {
             fileManager.getFile(FriendManager.class).loadFile();
             fileManager.getFile(MacroManager.class).loadFile();
@@ -46,7 +52,7 @@ public class Rich {
         } catch (Exception exception) {
             exception.printStackTrace();
         }
-        
+
         EventManager.register(this);
     }
 

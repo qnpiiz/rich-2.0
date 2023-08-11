@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 import javax.annotation.Nullable;
+
+import fun.rich.event.events.impl.player.EventMessage;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.BiomeSoundHandler;
@@ -368,7 +370,11 @@ public class ClientPlayerEntity extends AbstractClientPlayerEntity
      */
     public void sendChatMessage(String message)
     {
-        this.connection.sendPacket(new CChatMessagePacket(message));
+        EventMessage event = new EventMessage(message);
+        EventManager.call(event);
+
+        if (!event.isCancelled())
+            this.connection.sendPacket(new CChatMessagePacket(message));
     }
 
     public void swingArm(Hand hand)

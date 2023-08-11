@@ -24,7 +24,7 @@ public class MacroConfig extends FileManager.CustomFile {
                 String bind = curLine.split(":")[0];
                 String value = curLine.split(":")[1];
                 if (Rich.instance.macroManager != null)
-                    Rich.instance.macroManager.addMacro(new Macro(bind, Integer.parseInt(value)));
+                    Rich.instance.macroManager.addMacro(new Macro(value, InputMappings.getInputByName(bind.toUpperCase()).getKeyCode()));
             }
             br.close();
         } catch (Exception exception) {
